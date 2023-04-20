@@ -1,0 +1,52 @@
+PODS:
+  - AFNetworking (3.2.1.4):
+    - AFNetworking/NSURLSession (= 3.2.1.4)
+    - AFNetworking/Reachability (= 3.2.1.4)
+    - AFNetworking/Security (= 3.2.1.4)
+    - AFNetworking/Serialization (= 3.2.1.4)
+    - AFNetworking/UIKit (= 3.2.1.4)
+  - AFNetworking/NSURLSession (3.2.1.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1.4)
+  - AFNetworking/Security (3.2.1.4)
+  - AFNetworking/Serialization (3.2.1.4)
+  - AFNetworking/UIKit (3.2.1.4):
+    - AFNetworking/NSURLSession
+  - Masonry (1.1.0.100)
+  - MBProgressHUD (1.2.0.3)
+  - SDWebImage (5.8.3.42):
+    - SDWebImage/Core (= 5.8.3.42)
+  - SDWebImage/Core (5.8.3.42)
+  - SSZipArchive (2.2.2.1.2)
+  - YYModel (1.0.4.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Masonry
+  - MBProgressHUD
+  - SDWebImage
+  - SSZipArchive
+  - YYModel
+
+SPEC REPOS:
+  "git@git.corp.kuaishou.com:ios/dependents.git":
+    - AFNetworking
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+    - SSZipArchive
+    - YYModel
+
+SPEC CHECKSUMS:
+  AFNetworking: 36f58d62dcd6b1c756003b75bbd905e2039366a5
+  Masonry: ea33687d47481d4db6d5f16282ea9a8667622b51
+  MBProgressHUD: eaa3024ea5c8383b9e4a94f3a2f3d28cb8a6412f
+  SDWebImage: 9de3648896c2915de072bb9bdd9c2190186913c1
+  SSZipArchive: 4056496d44de51f70fe23b7cc08436e67e23f7c1
+  YYModel: f8cf2a33e26dd0a2e4fe06746b455841c1a6d3fa
+
+PODFILE CHECKSUM: 3c0d3d5a7f64fc8683e5d776c631cab8e96ea943
+
+COCOAPODS: 1.12.0
