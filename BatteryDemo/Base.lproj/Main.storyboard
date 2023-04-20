@@ -17,69 +17,139 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA6-ua-VCT">
-                                <rect key="frame" x="159" y="242" width="76" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="高CPU"/>
-                                <connections>
-                                    <action selector="highCPU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xD-Qi-tfr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mP-pt-5JR">
-                                <rect key="frame" x="159" y="317" width="77" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="高GPU"/>
-                                <connections>
-                                    <action selector="highGPU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg3-G0-3RG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kif-wJ-CMI">
-                                <rect key="frame" x="167" y="394" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="高IO"/>
-                                <connections>
-                                    <action selector="highIO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v9L-td-Uo9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkl-Yu-kZu">
-                                <rect key="frame" x="161" y="458" width="76" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="高网络"/>
-                                <connections>
-                                    <action selector="highNetwork:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Wq-ak-CXm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPc-cQ-Adp">
-                                <rect key="frame" x="161" y="530" width="76" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="摄像头"/>
-                                <connections>
-                                    <action selector="highScreenRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1YX-6u-mvo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmB-XZ-yXg">
-                                <rect key="frame" x="159" y="180" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="高GPS"/>
-                                <connections>
-                                    <action selector="highGPS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1eJ-h7-cZp"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="d0l-sW-tQ4">
+                                <rect key="frame" x="0.0" y="103" width="393" height="678.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA6-ua-VCT">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9lz-Da-T8v"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="高CPU"/>
+                                        <connections>
+                                            <action selector="highCPU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xD-Qi-tfr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mP-pt-5JR">
+                                        <rect key="frame" x="0.0" y="92" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9cL-Pc-afk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="高GPU"/>
+                                        <connections>
+                                            <action selector="highGPU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg3-G0-3RG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kif-wJ-CMI">
+                                        <rect key="frame" x="0.0" y="184" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="yPd-D3-4rm"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="高IO"/>
+                                        <connections>
+                                            <action selector="highIO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v9L-td-Uo9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkl-Yu-kZu">
+                                        <rect key="frame" x="0.0" y="276" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gp3-YO-59l"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="高网络"/>
+                                        <connections>
+                                            <action selector="highNetwork:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Wq-ak-CXm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPc-cQ-Adp">
+                                        <rect key="frame" x="0.0" y="368" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="U1W-dH-mpd"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="摄像头"/>
+                                        <connections>
+                                            <action selector="launchCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wcc-8J-CEA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmB-XZ-yXg">
+                                        <rect key="frame" x="0.0" y="460" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="til-Vn-mRM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="高GPS"/>
+                                        <connections>
+                                            <action selector="highGPS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1eJ-h7-cZp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-qt-0qB">
+                                        <rect key="frame" x="0.0" y="552" width="393" height="34.333333333333371"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="c2m-7t-8xJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="外放音量"/>
+                                        <connections>
+                                            <action selector="highSpeak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQ0-Lx-gK7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjJ-bU-t9C">
+                                        <rect key="frame" x="0.0" y="628.33333333333337" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RxJ-q9-5Y1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="屏幕亮度"/>
+                                        <connections>
+                                            <action selector="highScreenBrightness:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mcR-GG-Mpg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kmB-XZ-yXg" secondAttribute="trailing" id="0TT-ct-JSN"/>
+                                    <constraint firstItem="BA6-ua-VCT" firstAttribute="leading" secondItem="d0l-sW-tQ4" secondAttribute="leading" id="37f-b4-nRi"/>
+                                    <constraint firstAttribute="trailing" secondItem="5mP-pt-5JR" secondAttribute="trailing" id="7MC-Wb-h8p"/>
+                                    <constraint firstItem="kmB-XZ-yXg" firstAttribute="leading" secondItem="d0l-sW-tQ4" secondAttribute="leading" id="BC1-6c-0ms"/>
+                                    <constraint firstAttribute="trailing" secondItem="sjJ-bU-t9C" secondAttribute="trailing" id="EFB-Tp-kXz"/>
+                                    <constraint firstItem="kif-wJ-CMI" firstAttribute="leading" secondItem="d0l-sW-tQ4" secondAttribute="leading" id="LDx-Q2-Ii3"/>
+                                    <constraint firstItem="sjJ-bU-t9C" firstAttribute="leading" secondItem="d0l-sW-tQ4" secondAttribute="leading" id="T8K-Nu-qsd"/>
+                                    <constraint firstAttribute="trailing" secondItem="kif-wJ-CMI" secondAttribute="trailing" id="bHj-rS-kVR"/>
+                                    <constraint firstItem="5mP-pt-5JR" firstAttribute="leading" secondItem="d0l-sW-tQ4" secondAttribute="leading" id="gMn-pO-s6C"/>
+                                    <constraint firstItem="Mkl-Yu-kZu" firstAttribute="leading" secondItem="d0l-sW-tQ4" secondAttribute="leading" id="ihq-wR-FbG"/>
+                                    <constraint firstAttribute="trailing" secondItem="qPc-cQ-Adp" secondAttribute="trailing" id="iy5-21-lk3"/>
+                                    <constraint firstItem="BA6-ua-VCT" firstAttribute="top" secondItem="d0l-sW-tQ4" secondAttribute="top" id="qgi-Ny-jIm"/>
+                                    <constraint firstAttribute="trailing" secondItem="BA6-ua-VCT" secondAttribute="trailing" id="vsl-zX-uHU"/>
+                                    <constraint firstItem="qPc-cQ-Adp" firstAttribute="leading" secondItem="d0l-sW-tQ4" secondAttribute="leading" id="xna-bA-hDK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mkl-Yu-kZu" secondAttribute="trailing" id="xss-Wh-GYJ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d0l-sW-tQ4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Eh-CS-GNE"/>
+                            <constraint firstItem="d0l-sW-tQ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="68i-HT-3am"/>
+                            <constraint firstItem="d0l-sW-tQ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6fx-6I-G9E"/>
+                            <constraint firstItem="d0l-sW-tQ4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="88d-Uk-2fy"/>
+                            <constraint firstItem="d0l-sW-tQ4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bed-hm-iI5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="d0l-sW-tQ4" secondAttribute="top" id="E2y-dr-E7f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0l-sW-tQ4" secondAttribute="trailing" id="poj-Bw-6jl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d0l-sW-tQ4" secondAttribute="bottom" id="stZ-sC-rOx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JNp-mz-kWZ"/>
+                    <connections>
+                        <outlet property="screenBrightnessBtn" destination="sjJ-bU-t9C" id="iod-E4-vus"/>
+                        <outlet property="speakBtn" destination="hIK-qt-0qB" id="ztP-W9-ku4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531" y="713"/>
+            <point key="canvasLocation" x="530.53435114503816" y="711.97183098591552"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="WaB-6g-aEZ">

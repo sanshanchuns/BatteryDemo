@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo-resources.sh
+${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Core/APMInsightCore.bundle
+${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Crash/APMInsightCrash.bundle
+${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Hybrid/APMInsightHybrid.bundle

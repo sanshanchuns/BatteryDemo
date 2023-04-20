@@ -13,6 +13,8 @@
 #import <SDWebImage/SDWebImage.h>
 #import <ZipArchive.h>
 #import <CoreLocation/CoreLocation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 #import "SecondViewController.h"
 
@@ -31,10 +33,12 @@ static void BDLog(NSString *content) {
 
 @interface ViewController () <CLLocationManagerDelegate, UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic, strong) NSFileManager *fileManager;
+@property (weak, nonatomic) IBOutlet UIButton *screenBrightnessBtn;
 @property (nonatomic, weak) MBProgressHUD *hud;
 @property (nonatomic, copy) NSString* diskCachePath;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property(nonatomic,strong) UIImagePickerController *imagePicker; //声明全局的UIImagePickerController
+@property (weak, nonatomic) IBOutlet UIButton *speakBtn;
 @end
 
 @implementation ViewController
@@ -46,6 +50,13 @@ static void BDLog(NSString *content) {
     self.diskCachePath = [NSString stringWithFormat:@"%@/%@", NSHomeDirectory(), @"Library/Caches/AwemeHeaders"];
     
     BDLog(self.diskCachePath);
+    
+    CGFloat brightness = [UIScreen mainScreen].brightness;
+    [self.screenBrightnessBtn setTitle:[NSString stringWithFormat:@"当前屏幕亮度%.2f", brightness] forState:UIControlStateNormal];
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    CGFloat systemVolume = audioSession.outputVolume;
+    [self.speakBtn setTitle:[NSString stringWithFormat:@"当前音量%.2f", systemVolume] forState:UIControlStateNormal];
 }
 
 - (IBAction)highCPU:(id)sender {
@@ -94,7 +105,7 @@ static void BDLog(NSString *content) {
     [self unzipToSandbox];
 }
 
-- (IBAction)highScreenRefresh:(id)sender {
+- (IBAction)launchCamera:(id)sender {
     NSUInteger sourceType = 0;
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -106,12 +117,36 @@ static void BDLog(NSString *content) {
         imagePickerController.sourceType = sourceType;
         [self presentViewController:imagePickerController animated:YES completion:nil];
         BDLog(@"launch camera");
-    }else {
+    } else {
         sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         imagePickerController.sourceType = sourceType;
         [self presentViewController:imagePickerController animated:YES completion:nil];
     }
 }
+
+- (IBAction)highSpeak:(id)sender {
+    [self setSystemVolume:1];
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    CGFloat systemVolume = audioSession.outputVolume;
+    [self.speakBtn setTitle:[NSString stringWithFormat:@"当前音量%.2f", systemVolume] forState:UIControlStateNormal];
+}
+
+- (IBAction)highScreenBrightness:(id)sender {
+    //屏幕亮度设置为1
+    CGFloat brightness = [UIScreen mainScreen].brightness;
+    if (brightness == 1) {
+        [UIScreen mainScreen].brightness = 0;
+        [self.screenBrightnessBtn setTitle:[NSString stringWithFormat:@"当前屏幕亮度%.2f", 0.0] forState:UIControlStateNormal];
+    } else {
+        brightness += 0.1;
+        [UIScreen mainScreen].brightness = brightness;
+        [self.screenBrightnessBtn setTitle:[NSString stringWithFormat:@"当前屏幕亮度%.2f", brightness] forState:UIControlStateNormal];
+    }
+}
+
+#pragma mark -
+#pragma mark - Helper
 
 - (void)downloadSmallFileWithHighFrequency {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -175,6 +210,20 @@ static void BDLog(NSString *content) {
     NSDirectoryEnumerator *fileEnumerator = [self.fileManager enumeratorAtPath:self.diskCachePath];
     count = fileEnumerator.allObjects.count;
     return count;
+}
+
+// 修改系统音量值
+- (void)setSystemVolume:(float)volume {
+    MPVolumeView *volumeView = [[MPVolumeView alloc] init];
+    UISlider *volumeSlider;
+    for (UIView *view in volumeView.subviews) {
+        if ([view isKindOfClass:[UISlider class]]) {
+            volumeSlider = (UISlider *)view;
+            break;
+        }
+    }
+    [volumeSlider setValue:volume animated:NO];
+    [volumeSlider sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark -
