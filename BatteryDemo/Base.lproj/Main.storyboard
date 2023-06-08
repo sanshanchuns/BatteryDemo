@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="d0l-sW-tQ4">
-                                <rect key="frame" x="0.0" y="103" width="393" height="678.33333333333337"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA6-ua-VCT">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
@@ -87,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-qt-0qB">
-                                        <rect key="frame" x="0.0" y="552" width="393" height="34.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="552" width="393" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="c2m-7t-8xJ"/>
                                         </constraints>
@@ -98,7 +98,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjJ-bU-t9C">
-                                        <rect key="frame" x="0.0" y="628.33333333333337" width="393" height="50"/>
+                                        <rect key="frame" x="0.0" y="644" width="393" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RxJ-q9-5Y1"/>
                                         </constraints>
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyH-k5-4DV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385" y="713"/>
+            <point key="canvasLocation" x="1383.9694656488548" y="712.67605633802816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5wz-D8-zKU">

@@ -11,7 +11,6 @@
 		B324C44A29F00EE7008CE7BE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B324C44929F00EE7008CE7BE /* SecondViewController.m */; };
 		B324C44C29F013EE008CE7BE /* pexels_westarmoney.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B324C44B29F013ED008CE7BE /* pexels_westarmoney.mp4 */; };
 		B3D6D84A29EFC3B100E654AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6D84929EFC3B100E654AB /* AppDelegate.m */; };
-		B3D6D84D29EFC3B100E654AB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6D84C29EFC3B100E654AB /* SceneDelegate.m */; };
 		B3D6D85029EFC3B100E654AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6D84F29EFC3B100E654AB /* ViewController.m */; };
 		B3D6D85329EFC3B100E654AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D6D85129EFC3B100E654AB /* Main.storyboard */; };
 		B3D6D85529EFC3B200E654AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D6D85429EFC3B200E654AB /* Assets.xcassets */; };
@@ -30,8 +29,6 @@
 		B3D6D84529EFC3B100E654AB /* BatteryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D6D84829EFC3B100E654AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3D6D84929EFC3B100E654AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B3D6D84B29EFC3B100E654AB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		B3D6D84C29EFC3B100E654AB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		B3D6D84E29EFC3B100E654AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B3D6D84F29EFC3B100E654AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B3D6D85229EFC3B100E654AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,8 +86,6 @@
 				B3D8485B29EFEB440069A5E9 /* BatteryDemo.entitlements */,
 				B3D6D84829EFC3B100E654AB /* AppDelegate.h */,
 				B3D6D84929EFC3B100E654AB /* AppDelegate.m */,
-				B3D6D84B29EFC3B100E654AB /* SceneDelegate.h */,
-				B3D6D84C29EFC3B100E654AB /* SceneDelegate.m */,
 				B3D6D84E29EFC3B100E654AB /* ViewController.h */,
 				B3D6D84F29EFC3B100E654AB /* ViewController.m */,
 				B324C44829F00EE7008CE7BE /* SecondViewController.h */,
@@ -237,7 +232,6 @@
 				B3D6D85029EFC3B100E654AB /* ViewController.m in Sources */,
 				B3D6D84A29EFC3B100E654AB /* AppDelegate.m in Sources */,
 				B3D6D85B29EFC3B200E654AB /* main.m in Sources */,
-				B3D6D84D29EFC3B100E654AB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +379,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7U634AK5AY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BatteryDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -392,7 +390,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +415,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7U634AK5AY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BatteryDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -424,7 +426,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,15 +9,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Masonry/Masonry.h>
 
-@interface SecondViewController ()
+@interface SecondViewController () <CALayerDelegate>
 @property (nonatomic, strong) AVPlayer *player;
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
-
-@property (nonatomic, strong) AVPlayer *player2;
-@property (nonatomic, strong) AVPlayerLayer *playerLayer2;
-
-@property (nonatomic, strong) AVPlayer *player3;
-@property (nonatomic, strong) AVPlayerLayer *playerLayer3;
 @end
 
 @implementation SecondViewController
@@ -58,39 +52,6 @@
     
     // 4. 播放视频
     [self.player play];
-    
-    AVPlayerItem *playerItem2 = [[AVPlayerItem alloc] initWithURL:videoURL];
-    self.player2 = [[AVPlayer alloc] initWithPlayerItem:playerItem2];
-    
-    // 2. 创建显示视频的layer
-    self.playerLayer2 = [AVPlayerLayer playerLayerWithPlayer:self.player2];
-    self.playerLayer2.frame = self.view.bounds;
-    [self.view.layer addSublayer:self.playerLayer2];
-    
-    // 3. 监听播放结束通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.player2.currentItem];
-    
-    // 4. 播放视频
-    [self.player2 play];
-    
-    // 4. 播放视频
-    [self.player play];
-    
-    
-    AVPlayerItem *playerItem3 = [[AVPlayerItem alloc] initWithURL:videoURL];
-    self.player3 = [[AVPlayer alloc] initWithPlayerItem:playerItem3];
-    
-    // 2. 创建显示视频的layer
-    self.playerLayer3 = [AVPlayerLayer playerLayerWithPlayer:self.player3];
-    self.playerLayer3.frame = self.view.bounds;
-    [self.view.layer addSublayer:self.playerLayer3];
-    
-    // 3. 监听播放结束通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.player3.currentItem];
-    
-    // 4. 播放视频
-    [self.player3 play];
-    
 }
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
