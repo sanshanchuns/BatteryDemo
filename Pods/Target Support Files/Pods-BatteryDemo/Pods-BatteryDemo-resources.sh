@@ -97,14 +97,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Core/APMInsightCore.bundle"
-  install_resource "${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Crash/APMInsightCrash.bundle"
-  install_resource "${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Hybrid/APMInsightHybrid.bundle"
+  install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Core/APMInsightCore.bundle"
-  install_resource "${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Crash/APMInsightCrash.bundle"
-  install_resource "${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Hybrid/APMInsightHybrid.bundle"
+  install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

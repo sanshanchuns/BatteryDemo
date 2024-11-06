@@ -1,17 +1,19 @@
-use_frameworks!
+#use_frameworks!
 
 platform :ios, '9.0'
 
-source 'https://github.com/volcengine/volcengine-specs.git'
-source 'git@git.corp.kuaishou.com:ios/dependents.git'
+#source 'https://github.com/volcengine/volcengine-specs.git'
+#source 'git@git.corp.kuaishou.com:ios/dependents.git'
 
 target 'BatteryDemo' do
-  pod 'AFNetworking'
-  pod 'SDWebImage'
-  pod 'YYModel'
-  pod 'MBProgressHUD'
-  pod 'SSZipArchive'
-  pod 'Masonry'
+  pod "Aspects"
+  pod "MJRefresh"
+#  pod 'AFNetworking'
+#  pod 'SDWebImage'
+#  pod 'YYModel'
+#  pod 'MBProgressHUD'
+#  pod 'SSZipArchive'
+#  pod 'Masonry'
   
 #  pod 'RangersAPM', '3.3.0', :subspecs => [
 #      'Crash',

@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "pod_version": "1.12.0",
+      "start_time": "2024-02-07T14:56:02.667+08:00",
+      "success": false,
+      "git": {
+        "user_name": "zhuli",
+        "user_email": "zhuli@kuaishou.com",
+        "branch": "main",
+        "commit": "054c6d9",
+        "remote": "git@github.com:sanshanchuns/BatteryDemo.git",
+        "whoami": "leo"
+      },
+      "upload_time": "2024-02-07T14:56:02.667+08:00",
+      "upload_ts": 1707288962,
+      "ruby_version": "3.0.0",
+      "os_version": "14.0",
+      "ip": "192.168.3.54",
+      "cpu": "Apple M2 Pro",
+      "xcode_version": "15.0",
+      "xcode_build_version": "15A240d",
+      "errors": "[!] Cancelled",
+      "name": "pod install error",
+      "task_id": null,
+      "pod_install_id": "3f2cb7c1615ead5e8d63d846a8a65fea"
+    }
+  ]
+}

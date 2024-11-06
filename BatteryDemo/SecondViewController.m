@@ -6,63 +6,80 @@
 //
 
 #import "SecondViewController.h"
-#import <AVFoundation/AVFoundation.h>
-#import <Masonry/Masonry.h>
+#import <Metal/Metal.h>
+#import <MetalKit/MetalKit.h>
 
-@interface SecondViewController () <CALayerDelegate>
-@property (nonatomic, strong) AVPlayer *player;
-@property (nonatomic, strong) AVPlayerLayer *playerLayer;
+@interface SecondViewController ()
+@property (nonatomic, strong) id<MTLDevice> device;
+@property (nonatomic, strong) id<MTLCommandQueue> commandQueue;
+@property (nonatomic, strong) id<MTLComputePipelineState> computePipelineState;
 @end
 
 @implementation SecondViewController
 
-- (BOOL)shouldAutorotate {
-    return YES;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskLandscape;
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
-        // 将AVPlayerLayer的frame设置为横屏方向的屏幕尺寸
-        CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-        self.playerLayer.frame = CGRectMake(0, 0, MAX(screenSize.width, screenSize.height), MIN(screenSize.width, screenSize.height));
-    } else {
-        
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+        
+    self.device = MTLCreateSystemDefaultDevice();
+    self.commandQueue = [self.device newCommandQueue];
     
-    NSURL *videoURL = [[NSBundle mainBundle] URLForResource:@"pexels_westarmoney" withExtension:@"mp4"];
-    AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:videoURL];
-    self.player = [[AVPlayer alloc] initWithPlayerItem:playerItem];
+    // Define your compute shader code
+    NSString *shaderCode = @"\
+    #include <metal_stdlib>\n\
+    using namespace metal;\n\
+    kernel void computeShader(texture2d<half, access::write> output [[texture(0)]], uint2 gid [[thread_position_in_grid]])\n\
+    {\n\
+        // Intensive computation\n\
+        for (int i = 0; i < 1000000; i++)\n\
+        {\n\
+            float value = 1.0;\n\
+            value = value * 2.0;\n\
+        }\n\
+        half4 color = half4(1.0);\n\
+        output.write(color, gid);\n\
+    }\n\
+    ";
     
-    // 2. 创建显示视频的layer
-    self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-    self.playerLayer.frame = self.view.bounds;
-    [self.view.layer addSublayer:self.playerLayer];
+    NSError *error = nil;
+    id<MTLLibrary> library = [self.device newLibraryWithSource:shaderCode options:nil error:&error];
+    if (error != nil) {
+        NSLog(@"Error creating library: %@", error);
+        return;
+    }
     
-    // 3. 监听播放结束通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.player.currentItem];
+    id<MTLFunction> computeFunction = [library newFunctionWithName:@"computeShader"];
     
-    // 4. 播放视频
-    [self.player play];
-}
+    id<MTLComputePipelineState> computePipelineState = [self.device newComputePipelineStateWithFunction:computeFunction error:&error];
+    if (error != nil || computePipelineState == nil) {
+        NSLog(@"Error creating compute pipeline state: %@", error);
+        return;
+    }
+    
+    self.computePipelineState = computePipelineState;
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.16 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        MTKView *metalView = [[MTKView alloc] initWithFrame:self.view.bounds device:self.device];
+        metalView.clearColor = MTLClearColorMake(0.0, 0.0, 0.0, 1.0);
+        metalView.colorPixelFormat = MTLPixelFormatBGRA8Unorm;
+        [self.view addSubview:metalView];
+        
+        id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
+        
+        id<MTLComputeCommandEncoder> computeEncoder = [commandBuffer computeCommandEncoder];
+        [computeEncoder setComputePipelineState:self.computePipelineState];
+        
+        MTLSize threadgroupSize = MTLSizeMake(8, 8, 1);
+        MTLSize threadgroupCount = MTLSizeMake(metalView.drawableSize.width / threadgroupSize.width,
+                                               metalView.drawableSize.height / threadgroupSize.height, 1);
+        [computeEncoder dispatchThreadgroups:threadgroupCount threadsPerThreadgroup:threadgroupSize];
+        
+        [computeEncoder endEncoding];
+        
+        [commandBuffer presentDrawable:metalView.currentDrawable];
+        [commandBuffer commit];
+    }];
 
-- (void)playerItemDidReachEnd:(NSNotification *)notification {
-    // 播放完成后，将播放进度归零，并重新播放
-    AVPlayerItem *playerItem = [notification object];
-    [playerItem seekToTime:kCMTimeZero];
-    [self.player play];
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

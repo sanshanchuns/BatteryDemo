@@ -1,7 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo-frameworks.sh
-${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
-${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
-${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
-${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
-${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework
-${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework
+${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework

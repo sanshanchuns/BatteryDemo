@@ -7,25 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5110E41542D157137B6FE23F /* Pods_BatteryDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3319A4062FFCB6629B397AA /* Pods_BatteryDemo.framework */; };
-		B324C44A29F00EE7008CE7BE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B324C44929F00EE7008CE7BE /* SecondViewController.m */; };
-		B324C44C29F013EE008CE7BE /* pexels_westarmoney.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B324C44B29F013ED008CE7BE /* pexels_westarmoney.mp4 */; };
+		60BCFB6DEA90377DA2DCDDE3 /* libPods-BatteryDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA958625DCA8DE9C20C186A /* libPods-BatteryDemo.a */; };
+		B353EDEA2BFDC2EA00DB5B5D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B353EDE92BFDC2EA00DB5B5D /* Person.m */; };
 		B3D6D84A29EFC3B100E654AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6D84929EFC3B100E654AB /* AppDelegate.m */; };
 		B3D6D85029EFC3B100E654AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6D84F29EFC3B100E654AB /* ViewController.m */; };
 		B3D6D85329EFC3B100E654AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D6D85129EFC3B100E654AB /* Main.storyboard */; };
 		B3D6D85529EFC3B200E654AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D6D85429EFC3B200E654AB /* Assets.xcassets */; };
 		B3D6D85829EFC3B200E654AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D6D85629EFC3B200E654AB /* LaunchScreen.storyboard */; };
 		B3D6D85B29EFC3B200E654AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6D85A29EFC3B200E654AB /* main.m */; };
-		B3D6D86429EFCC8500E654AB /* AwemeHeaders.zip in Resources */ = {isa = PBXBuildFile; fileRef = B3D6D86329EFCC8500E654AB /* AwemeHeaders.zip */; };
-		B3D6D86629EFCE2D00E654AB /* test.zip in Resources */ = {isa = PBXBuildFile; fileRef = B3D6D86529EFCE2D00E654AB /* test.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5EB331C523CEFBF9FD0E9C4F /* Pods-BatteryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatteryDemo.debug.xcconfig"; path = "Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9DB351299C0507DC565A5620 /* Pods-BatteryDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BatteryDemo.release.xcconfig"; path = "Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo.release.xcconfig"; sourceTree = "<group>"; };
-		B324C44829F00EE7008CE7BE /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B324C44929F00EE7008CE7BE /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		B324C44B29F013ED008CE7BE /* pexels_westarmoney.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pexels_westarmoney.mp4; sourceTree = "<group>"; };
+		B340A6652A8CFBAF0022BC7E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B353EDE82BFDC2EA00DB5B5D /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		B353EDE92BFDC2EA00DB5B5D /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		B3D6D84529EFC3B100E654AB /* BatteryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D6D84829EFC3B100E654AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3D6D84929EFC3B100E654AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,10 +33,8 @@
 		B3D6D85729EFC3B200E654AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3D6D85929EFC3B200E654AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D6D85A29EFC3B200E654AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B3D6D86329EFCC8500E654AB /* AwemeHeaders.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = AwemeHeaders.zip; sourceTree = "<group>"; };
-		B3D6D86529EFCE2D00E654AB /* test.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = test.zip; sourceTree = "<group>"; };
 		B3D8485B29EFEB440069A5E9 /* BatteryDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BatteryDemo.entitlements; sourceTree = "<group>"; };
-		E3319A4062FFCB6629B397AA /* Pods_BatteryDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BatteryDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA958625DCA8DE9C20C186A /* libPods-BatteryDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BatteryDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5110E41542D157137B6FE23F /* Pods_BatteryDemo.framework in Frameworks */,
+				60BCFB6DEA90377DA2DCDDE3 /* libPods-BatteryDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +52,8 @@
 		AA451FFEBF63CD24510F81E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3319A4062FFCB6629B397AA /* Pods_BatteryDemo.framework */,
+				B340A6652A8CFBAF0022BC7E /* IOKit.framework */,
+				EEA958625DCA8DE9C20C186A /* libPods-BatteryDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,11 +84,8 @@
 				B3D6D84929EFC3B100E654AB /* AppDelegate.m */,
 				B3D6D84E29EFC3B100E654AB /* ViewController.h */,
 				B3D6D84F29EFC3B100E654AB /* ViewController.m */,
-				B324C44829F00EE7008CE7BE /* SecondViewController.h */,
-				B324C44929F00EE7008CE7BE /* SecondViewController.m */,
-				B324C44B29F013ED008CE7BE /* pexels_westarmoney.mp4 */,
-				B3D6D86329EFCC8500E654AB /* AwemeHeaders.zip */,
-				B3D6D86529EFCE2D00E654AB /* test.zip */,
+				B353EDE82BFDC2EA00DB5B5D /* Person.h */,
+				B353EDE92BFDC2EA00DB5B5D /* Person.m */,
 				B3D6D85129EFC3B100E654AB /* Main.storyboard */,
 				B3D6D85429EFC3B200E654AB /* Assets.xcassets */,
 				B3D6D85629EFC3B200E654AB /* LaunchScreen.storyboard */,
@@ -122,7 +115,8 @@
 				B3D6D84129EFC3B100E654AB /* Sources */,
 				B3D6D84229EFC3B100E654AB /* Frameworks */,
 				B3D6D84329EFC3B100E654AB /* Resources */,
-				ABB33CBD51CFE61D7DCCA406 /* [CP] Embed Pods Frameworks */,
+				B340A6642A8CF2550022BC7E /* ShellScript */,
+				1EC60A2D207F2BF13B387136 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,12 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D6D86429EFCC8500E654AB /* AwemeHeaders.zip in Resources */,
 				B3D6D85829EFC3B200E654AB /* LaunchScreen.storyboard in Resources */,
 				B3D6D85529EFC3B200E654AB /* Assets.xcassets in Resources */,
 				B3D6D85329EFC3B100E654AB /* Main.storyboard in Resources */,
-				B3D6D86629EFCE2D00E654AB /* test.zip in Resources */,
-				B324C44C29F013EE008CE7BE /* pexels_westarmoney.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,22 +195,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ABB33CBD51CFE61D7DCCA406 /* [CP] Embed Pods Frameworks */ = {
+		1EC60A2D207F2BF13B387136 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BatteryDemo/Pods-BatteryDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B340A6642A8CF2550022BC7E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"hello\" >> /dev/ttys004\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -228,9 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B324C44A29F00EE7008CE7BE /* SecondViewController.m in Sources */,
 				B3D6D85029EFC3B100E654AB /* ViewController.m in Sources */,
 				B3D6D84A29EFC3B100E654AB /* AppDelegate.m in Sources */,
+				B353EDEA2BFDC2EA00DB5B5D /* Person.m in Sources */,
 				B3D6D85B29EFC3B200E654AB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +399,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,6 +436,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
